@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script type=text/javascript>
+                $(function() {
+                $('button#test').on('click', function(e) {
+                    console.log('click')
+                    e.preventDefault()
+                    $.getJSON('/background_process_test', function(jd) {
+                            console.log(jd.pion_noir)
+                            for (var i = 0; i < jd.pion_noir.length; i++) {
+                                id = jd.pion_noir[i];
+                                $('#' + id).css('background-color', 'black');
+                            }
+                        });
+                    return false;
+                });
+            });
+        </script>
+    </head> 
+    <body>
+        <div class='container'>
+            <h3>Test</h3>
+            <button type="button" id="test">i'm a button test</button>
+            <p id="stage"></p>
+        </div>
+    </body>
+</html>

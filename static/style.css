@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 95vh;
+    width: 100vw;
+    background-color: #222;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: #F2F2F2;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+}
+
+::selection {
+    background-color: #009067;
+}
+
+.centre {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.jeu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 80%;
+    gap: 20px;
+}
+
+.case {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #009067;
+    border: none;
+    margin: 0;
+    padding: 0;
+    transition: 50ms;
+}
+
+.case:hover {
+    background-color: #006447;
+    transition: 100ms;
+}
+
+.grid_plateau {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(8, 50px);
+    grid-template-rows: repeat(8, 50px);
+    margin: 0;
+    padding: 20px;
+    gap: 2px;
+    background-color: #181818;
+    border-radius: 10px;
+}
+
+.pion {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.pion_blanc {
+    background-color: #F2F2F2;
+}
+
+.pion_noir {
+    background-color: #222;
+}
+
+.pion_outline {
+    border: solid 2px #003E2C;
+}
+
+.pion_outline_blanc {
+    border: solid 2px #F2F2F2;
+}
+
+.pion_outline_noir {
+    border: solid 2px #222;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #181818;
+}
+
+.nb_pions_titre {
+    font-size: 1.3rem;
+    margin: 0;
+    padding: 0;
+
+}
+
+.nb_pions {
+    font-size: 5rem;
+}
+
+.final {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rejouer {
+    border: solid 3px #006447;
+    background-color: #006447;
+    color: #F2F2F2;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1.3rem;
+    padding: 5 10px;
+    border-radius: 2px;
+    transition: 200ms;
+}
+
+.rejouer:hover {
+    background-color: #222;
+    scale: 1.1;
+    transition: 300ms;
+    cursor: pointer;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    position: absolute;
+    bottom: 0;
+    height: 5vh;
+    width: 100%;
+    text-align: center;
+    background-color: #006447;
+}

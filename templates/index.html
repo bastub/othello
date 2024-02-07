@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Ot'hello World</title>
+        <link rel="stylesheet" href="static/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="{{ url_for('static', filename='app.js') }}"></script>
+    </head>
+    <body>
+        <div class="centre">
+            <h1>Ot'hello World</h1>
+            <div class="jeu">
+                <div class="info">
+                    <p class="nb_pions_titre" id="nb_pions_titre_blanc">Pions blancs :</p>
+                    <p class="nb_pions" id="nb_pions_blanc">2</p>
+                </div>
+                <div class="grid_plateau">
+                    <button class="case" id="00"></button>
+                    <button class="case" id="01"></button>
+                    <button class="case" id="02"></button>
+                    <button class="case" id="03"></button>
+                    <button class="case" id="04"></button>
+                    <button class="case" id="05"></button>
+                    <button class="case" id="06"></button>
+                    <button class="case" id="07"></button>
+                    <button class="case" id="10"></button>
+                    <button class="case" id="11"></button>
+                    <button class="case" id="12"></button>
+                    <button class="case" id="13"></button>
+                    <button class="case" id="14"></button>
+                    <button class="case" id="15"></button>
+                    <button class="case" id="16"></button>
+                    <button class="case" id="17"></button>
+                    <button class="case" id="20"></button>
+                    <button class="case" id="21"></button>
+                    <button class="case" id="22"></button>
+                    <button class="case" id="23"><div class="pion pion_outline_noir"></div></button>
+                    <button class="case" id="24"></button>
+                    <button class="case" id="25"></button>
+                    <button class="case" id="26"></button>
+                    <button class="case" id="27"></button>
+                    <button class="case" id="30"></button>
+                    <button class="case" id="31"></button>
+                    <button class="case" id="32"><div class="pion pion_outline_noir"></div></button>
+                    <button class="case" id="33"><div class="pion pion_blanc"></div></button>
+                    <button class="case" id="34"><div class="pion pion_noir"></div></button>
+                    <button class="case" id="35"></button>
+                    <button class="case" id="36"></button>
+                    <button class="case" id="37"></button>
+                    <button class="case" id="40"></button>
+                    <button class="case" id="41"></button>
+                    <button class="case" id="42"></button>
+                    <button class="case" id="43"><div class="pion pion_noir"></div></button>
+                    <button class="case" id="44"><div class="pion pion_blanc"></div></button>
+                    <button class="case" id="45"><div class="pion pion_outline_noir"></div></button>
+                    <button class="case" id="46"></button>
+                    <button class="case" id="47"></button>
+                    <button class="case" id="50"></button>
+                    <button class="case" id="51"></button>
+                    <button class="case" id="52"></button>
+                    <button class="case" id="53"></button>
+                    <button class="case" id="54"><div class="pion pion_outline_noir"></div></button>
+                    <button class="case" id="55"></button>
+                    <button class="case" id="56"></button>
+                    <button class="case" id="57"></button>
+                    <button class="case" id="60"></button>
+                    <button class="case" id="61"></button>
+                    <button class="case" id="62"></button>
+                    <button class="case" id="63"></button>
+                    <button class="case" id="64"></button>
+                    <button class="case" id="65"></button>
+                    <button class="case" id="66"></button>
+                    <button class="case" id="67"></button>
+                    <button class="case" id="70"></button>
+                    <button class="case" id="71"></button>
+                    <button class="case" id="72"></button>
+                    <button class="case" id="73"></button>
+                    <button class="case" id="74"></button>
+                    <button class="case" id="75"></button>
+                    <button class="case" id="76"></button>
+                    <button class="case" id="77"></button>
+                </div>
+                <div class="info">
+                    <p class="nb_pions_titre" id="nb_pions_titre_noir">Pions noirs :</p>
+                    <p class="nb_pions" id="nb_pions_noir">2</p>
+                </div>
+            </div>
+            <div class="final">
+                <p class="final_msg" id="fin">Les blancs ont gagné !</p>
+                <button class="rejouer" id="rejouer">Rejouer</button>
+            </div>
+        </div>
+        <div class="footer">
+            <p>© 2023 Ot'hello World - Quentin ESPANET et Bastien UBASSY</p>
+        </div>
+    </body>
+</html>
