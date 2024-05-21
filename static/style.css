@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --base: 300;
+    --light-col: hsl(var(--base), 100%, 40%);
+    --col: hsl(var(--base), 100%, 30%);
+    --dark-col: hsl(var(--base), 100%, 20%);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 95vh;
+    width: 100vw;
+    background-color: #222;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: #F2F2F2;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+}
+
+::selection {
+    background-color: var(--light-col);
+}
+
+.centre {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.jeu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 80%;
+    gap: 20px;
+}
+
+.case {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: var(--light-col);
+    border: none;
+    margin: 0;
+    padding: 0;
+    transition: 50ms;
+}
+
+.case:nth-child(16n + 1),
+.case:nth-child(16n + 3),
+.case:nth-child(16n + 5),
+.case:nth-child(16n + 7),
+.case:nth-child(16n + 10),
+.case:nth-child(16n + 12),
+.case:nth-child(16n + 14),
+.case:nth-child(16n + 16)
+{
+    background-color: var(--col);
+}
+
+.case:hover {
+    background-color: var(--dark-col);
+    transition: 100ms;
+}
+
+.grid_plateau {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(8, 50px);
+    grid-template-rows: repeat(8, 50px);
+    margin: 0;
+    padding: 20px;
+    gap: 0;
+    background-color: #181818;
+    border-radius: 10px;
+}
+
+.pion {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.pion_blanc {
+    background: linear-gradient(#fff, #ddd);
+}
+
+.pion_noir {
+    background: linear-gradient(#111, #222);
+}
+
+
+.pion_ghost_blanc {
+    opacity: .33;
+    scale: .5;
+    background-color: #F2F2F2;
+}
+
+.pion_ghost_noir {
+    opacity: .33;
+    scale: .5;
+    background-color: #222;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #181818;
+}
+
+.nb_pions_titre {
+    font-size: 1.3rem;
+    margin: 0;
+    padding: 0;
+
+}
+
+.nb_pions {
+    font-size: 5rem;
+}
+
+.final {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_rejouer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.rejouer {
+    border: solid 3px var(--dark-col);
+    background-color: var(--dark-col);
+    color: #F2F2F2;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1.3rem;
+    padding: 5 10px;
+    border-radius: 2px;
+    transition: 200ms;
+}
+
+.rejouer:hover {
+    background-color: #222;
+    scale: 1.1;
+    transition: 300ms;
+    cursor: pointer;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    height: 5vh;
+    width: 100%;
+    text-align: center;
+    background-color: var(--dark-col);
+}
+
+.info_mobile_wrap {
+    display: none;
+}
+
+
+@media only screen and (max-width: 1000px){
+    .info {display: none;}
+    .info_mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        background-color: #181818;
+        border-radius: 10px;
+    }
+    .jeu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .info_mobile_wrap {
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        width: 100%;
+        justify-content: center;
+    }
+    .nb_pions_titre {
+        font-size: 1rem;
+    }
+    .nb_pions {
+        font-size: 1.5rem;
+        padding: 0;
+        margin: 0;
+    }
+    .case {
+        width: 40px;
+        height: 40px;
+    }
+    .grid_plateau {
+        grid-template-columns: repeat(8, 40px);
+        grid-template-rows: repeat(8, 40px);
+        padding: 10px;
+    }
+    .pion {
+        width: 30px;
+        height: 30px;
+    }
+    .footer {
+        font-size: 0.7rem;
+    }
+}

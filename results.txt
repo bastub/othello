@@ -1,0 +1,19 @@
+Entrees : 
+|	Nombre de parties : 20
+|	Profondeur de recherche : 3
+|	Methode : Alpha-beta Negamax
+|	Heuristique : Matrice de valeurs tactiques 1 puis Nombre de pions (mixte)
+|	Heuristique mixte : Oui
+
+Resultats : 
+|	Nombre de victoires : 20
+|	Nombre de defaites : 0
+|	Nombre d'egalites : 0
+|
+|	Pourcentage de victoires : 100.0%
+|	Pourcentage de defaites : 0.0%
+|	Pourcentage d'egalites : 0.0%
+|
+|	Temps moyen d'une partie : 130.53955 s
+|	Temps moyen d'un coup : 4.35382 s
+
